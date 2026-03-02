@@ -1,0 +1,29 @@
+{
+  // ── Port Forwarding ────────────────────────────────────────────
+  // Automatically forward port 3000 so the browser can reach Flask
+  "remote.portsAttributes": {
+    "3000": {
+      "label": "AXIOM Stock Terminal",
+      "onAutoForward": "openBrowser",
+      "protocol": "http"
+    }
+  },
+
+  // Auto-forward any port Flask prints to the terminal
+  "remote.autoForwardPorts": true,
+  "remote.autoForwardPortsSource": "output",
+
+  // ── Python ────────────────────────────────────────────────────
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+  "python.terminal.activateEnvironment": true,
+
+  // ── Editor ────────────────────────────────────────────────────
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "**/.pytest_cache": true
+  },
+
+  // ── Terminal ──────────────────────────────────────────────────
+  "terminal.integrated.cwd": "${workspaceFolder}"
+}

@@ -1,0 +1,42 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "AXIOM — Run Flask Server",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/app.py",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "env": {
+        "FLASK_ENV": "development",
+        "FLASK_DEBUG": "0",
+        "PYTHONPATH": "${workspaceFolder}"
+      },
+      "args": [],
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "Running on http://.*:(\\d+)",
+        "uriFormat": "http://localhost:3000"
+      }
+    },
+    {
+      "name": "AXIOM — Run via main.py web",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "args": ["web"],
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "env": {
+        "FLASK_ENV": "development",
+        "PYTHONPATH": "${workspaceFolder}"
+      },
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "Running on http://.*:(\\d+)",
+        "uriFormat": "http://localhost:3000"
+      }
+    }
+  ]
+}
